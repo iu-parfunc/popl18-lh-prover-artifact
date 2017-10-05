@@ -40,7 +40,7 @@ WORKDIR /home/popl18/lvars
 RUN make test
 
 CMD cd /home/popl18/liquidhaskell && \
-    stack test liquidhaskell || true && \
+    stack test liquidhaskell && \
     cd /home/popl18/verified-instances && \
     make check && \
     cd /home/popl18/lvars && \
