@@ -1,7 +1,6 @@
 # popl18-lh-prover-artifact
 
-[![Travis](https://img.shields.io/travis/iu-parfunc/popl18-lh-prover-artifact.svg)]()
-[![Docker Build Status](https://img.shields.io/docker/build/parfunc/popl18-lh-prover-artifact.svg)]()
-[![Docker Pulls](https://img.shields.io/docker/pulls/parfunc/popl18-lh-prover-artifact.svg)]()
+[![Travis](https://img.shields.io/travis/iu-parfunc/popl18-lh-prover-artifact.svg)](https://travis-ci.org/iu-parfunc/popl18-lh-prover-artifact/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/parfunc/popl18-lh-prover-artifact.svg)](https://hub.docker.com/r/parfunc/popl18-lh-prover-artifact/)
 
 Artifact for POPL'18 lh-prover
