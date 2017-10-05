@@ -1,9 +1,12 @@
 FROM debian:unstable-20170907
 
 RUN apt-get -y update && \
-    apt-get -y install z3 git curl build-essential time ghc && \
+    apt-get -y install z3 git curl build-essential time ghc locales && \
+    update-locale LANG=C.UTF-8 && \
     apt-get -y clean autoclean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+ENV LANG C.UTF-8
 
 RUN curl -L https://github.com/commercialhaskell/stack/releases/download/v1.5.1/stack-1.5.1-linux-x86_64-static.tar.gz | \
     tar xz --wildcards --strip-components=1 -C /usr/local/bin '*/stack'
