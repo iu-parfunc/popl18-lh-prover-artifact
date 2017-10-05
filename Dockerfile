@@ -24,6 +24,8 @@ ENV PATH "/home/popl18/.local/bin:${PATH}"
 RUN stack install
 RUN stack test liquidhaskell --no-run-tests
 
+ENV DOCKER=false TIMEIT=true
+
 WORKDIR /home/popl18
 RUN git clone --depth 10 -b popl18 --recursive https://github.com/iu-parfunc/verified-instances.git
 WORKDIR /home/popl18/verified-instances
@@ -32,7 +34,7 @@ RUN make build
 WORKDIR /home/popl18
 RUN git clone --depth 10 -b popl18 --recursive https://github.com/iu-parfunc/lvars.git
 WORKDIR /home/popl18/lvars
-RUN make build
+RUN make test
 
 CMD cd /home/popl18/liquidhaskell && \
     stack test liquidhaskell || true && \
