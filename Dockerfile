@@ -39,6 +39,8 @@ RUN git clone --depth 10 -b popl18 --recursive https://github.com/iu-parfunc/lva
 WORKDIR /home/popl18/lvars
 RUN make test
 
+WORKDIR /home/popl18
+
 CMD cd /home/popl18/liquidhaskell && \
     stack test liquidhaskell && \
     cd /home/popl18/verified-instances && \
