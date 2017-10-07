@@ -66,29 +66,29 @@ You can install Liquid Haskell on your own machine from github.
 
 2. Install `stack` from [this link](https://docs.haskellstack.org/en/stable/README/).
 
-3. Clone and build LiquidHaskell:
+3. Clone this artifact and build LiquidHaskell:
 
     ```
-    $ git clone -b popl18 --recursive git@github.com:ucsd-progsys/liquidhaskell.git
+    $ git clone --recursive https://github.com/iu-parfunc/popl18-lh-prover-artifact.git 
     ```
 
-    ```
-    $ cd liquidhaskell
-    ```
+Doing a recursive checkout here will acquire threed submodules in the
+`checkouts/` directory:
+ 
+ * `liquidhaskell` - core implementation
+ * `verified-instances` - benchmark code and examples
+ * `lvars` - modified software related to another benchmark
+
+You can then install Liquid Haskell on your system with:
         
     ```
+    $ cd checkout/liquidhaskell
     $ stack install
     ```
-    
-4. Clone the Benchmarks:
 
-    ```
-    $ git clone -b popl18 --recursive https://github.com/iu-parfunc/verified-instances.git
-    ```
+Stack by default will put the binary in `~/.local/bin`, but the
+`--local-bin-path` option can change this.
 
-    ```
-    $ git clone -b popl18 --recursive https://github.com/iu-parfunc/lvars.git
-    ```
 
 #### Run Benchmarks
 
