@@ -137,6 +137,10 @@ We split the benchmarks of Table 1 to 3 categories.
     make DOCKER=false TIMEIT=true PLE=false
     ```
 
+Each test will print a timing to the screen, corresponding to the
+"Time (s)" numbers in Table 1.
+
+
 ## <a name="source-files"></a>Source Files 
 
 The source files of Benchmarks in Table 1 can be located as follows.
