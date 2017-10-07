@@ -101,11 +101,11 @@ Now you can run specific benchmarks in that shell, whether inside
 Docker or not, e.g.  to check the files `Unification.hs` and
 `Solver.hs`, do:
 
-    $ stack exec -- liquid benchmarks/popl18/with_ple/Overview.lhs
-    $ stack exec -- liquid benchmarks/popl18/with_ple/LawsForLists.lhs
-    $ stack exec -- liquid benchmarks/popl18/with_ple/NaturalDeduction.lhs
-    $ stack exec -- liquid benchmarks/popl18/with_ple/ple/pos/Unification.hs
-    $ stack exec -- liquid benchmarks/popl18/with_ple/ple/pos/Solver.hs
+    stack exec -- liquid benchmarks/popl18/with_ple/Overview.lhs
+    stack exec -- liquid benchmarks/popl18/with_ple/LawsForLists.lhs
+    stack exec -- liquid benchmarks/popl18/with_ple/NaturalDeduction.lhs
+    stack exec -- liquid benchmarks/popl18/with_ple/ple/pos/Unification.hs
+    stack exec -- liquid benchmarks/popl18/with_ple/ple/pos/Solver.hs
 
 ##### Run All the Benchmarks of Table 1
 
