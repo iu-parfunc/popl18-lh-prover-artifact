@@ -22,7 +22,7 @@ The examples presented in the paper (Sections 2 and 3) can be viewed
 and checked at the interactive, online demo links below: 
 
 
-We provide interactive Liquid Haksell code for 
+We provide interactive Liquid Haskell code for 
 the examples presented in Sections 2 and 3 of the paper. 
 The Liquid Haskell queries are checked by sending requests to 
 the Liquid Haskell server hosted at [http://goto.ucsd.edu:8090/](http://goto.ucsd.edu:8090/).
@@ -72,7 +72,7 @@ You can install Liquid Haskell on your own machine from github.
     $ git clone --recursive https://github.com/iu-parfunc/popl18-lh-prover-artifact.git 
     ```
 
-Doing a recursive checkout here will acquire threed submodules in the
+Doing a recursive checkout here will acquire three submodules in the
 `checkouts/` directory:
  
  * `liquidhaskell` - core implementation
