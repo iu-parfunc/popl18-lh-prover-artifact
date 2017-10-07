@@ -114,27 +114,28 @@ We split the benchmarks of Table 1 to 3 categories.
 
 1. To run the benchmarks in categories "Arithmetic", "Class-Laws", "Higher-Order", and "Functional Correctness" of Table 1 _with_ PLE _with_ and _without_ PLE, respectively, do:
 
-    $ cd liquidhaskell
-
-    $ stack test liquidhaskell --test-arguments="-p with_ple"
-    
-    $ stack test liquidhaskell --test-arguments="-p without_ple"
+    ```bash
+    cd liquidhaskell
+    stack test liquidhaskell --test-arguments="-p with_ple"    
+    stack test liquidhaskell --test-arguments="-p without_ple"
+    ```
 
 
 2. To run the benchmarks in "Conc. Sets" _with_ and _without_ PLE, respectively, do:
 
-    $ cd lvars ; make DOCKER=false TIMEIT=true PLE=true
-
-    $ cd lvars ; make DOCKER=false TIMEIT=true PLE=false
-
+    ```bash
+    cd lvars
+    make DOCKER=false TIMEIT=true PLE=true
+    make DOCKER=false TIMEIT=true PLE=false
+    ```
 
 3. Finally, run the benchmarks in "n-body" & "Par. Reducers" categories, _with_ and _without_ PLE, respectively, do:
 
-    $ cd verified-instances ; make DOCKER=false TIMEIT=true PLE=true
-
-    $ cd verified-instances ; make DOCKER=false TIMEIT=true PLE=false
-
-
+    ```bash
+    cd verified-instances 
+    make DOCKER=false TIMEIT=true PLE=true
+    make DOCKER=false TIMEIT=true PLE=false
+    ```
 
 ## <a name="source-files"></a>Source Files 
 
