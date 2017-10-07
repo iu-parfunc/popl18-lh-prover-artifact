@@ -141,124 +141,25 @@ We split the benchmarks of Table 1 to 3 categories.
 
 The source files of Benchmarks in Table 1 can be located as follows.
 
-<style>
-table {
-    border-collapse: collapse;
-    font-family: arial, sans-serif;
-    text-align: left;
-}
-
-td, th {
-    border: 1px solid #dddddd;
-    border-collapse: collapse;
-    text-align: left;
-}
-</style>
-
-<table>
-  <tr>
-    <th>Category</th>
-    <th><i>Without</i> PLE Search&nbsp;&nbsp;</th>
-    <th><i>With</i> PLE Search&nbsp;&nbsp;</th>
-  </tr>
-  <tr>
-    <td>Arithmetic</td>
-    <td><a target="_blank" href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/without_ple/pos/Fibonacci.hs">Fibonacci.hs</a></td>
-    <td><a target="_blank" href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/with_ple/pos/Fibonacci.hs">Fibonacci.hs</a></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td><a target="_blank" href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/without_ple/pos/Ackermann.hs">Ackermann.hs</a></td>
-    <td><a target="_blank" href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/with_ple/pos/Ackermann.hs">Ackermann.hs</a></td>
-  </tr>
-  <tr>
-    <td>Class Laws</td>
-    <td><a target="_blank" href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/without_ple/pos/MonoidMaybe.hs">MonoidMaybe.hs</a></td>
-    <td><a target="_blank" href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/with_ple/pos/MonoidMaybe.hs">MonoidMaybe.hs</a></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td><a target="_blank" href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/without_ple/pos/MonoidList.hs">MonoidList.hs</a></td>
-    <td><a target="_blank" href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/with_ple/pos/MonoidList.hs">MonoidList.hs</a></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td><a target="_blank" href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/without_ple/pos/FunctorId.hs">FunctorId.hs</a></td>
-    <td><a target="_blank" href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/with_ple/pos/FunctorId.hs">FunctorId.hs</a></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td><a target="_blank" href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/without_ple/pos/FunctorMaybe.hs">FunctorMaybe.hs</a></td>
-    <td><a target="_blank" href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/with_ple/pos/FunctorMaybe.hs">FunctorMaybe.hs</a></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td><a target="_blank" href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/without_ple/pos/FunctorList.hs">FunctorList.hs</a></td>
-    <td><a target="_blank" href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/with_ple/pos/FunctorList.hs">FunctorList.hs</a></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td><a target="_blank" href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/without_ple/pos/ApplicativeId.hs">ApplicativeId.hs</a></td>
-    <td><a target="_blank" href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/with_ple/pos/ApplicativeId.hs">ApplicativeId.hs</a></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td><a target="_blank" href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/without_ple/pos/ApplicativeMaybe.hs">ApplicativeMaybe.hs</a></td>
-    <td><a target="_blank" href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/with_ple/pos/ApplicativeMaybe.hs">ApplicativeMaybe.hs</a></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td><a target="_blank" href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/without_ple/pos/ApplicativeList.hs">ApplicativeList.hs</a></td>
-    <td><a target="_blank" href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/with_ple/pos/ApplicativeList.hs">ApplicativeList.hs</a></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td><a target="_blank" href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/without_ple/pos/MonadId.hs">MonadId.hs</a></td>
-    <td><a target="_blank" href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/with_ple/pos/MonadId.hs">MonadId.hs</a></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td><a target="_blank" href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/without_ple/pos/MonadMaybe.hs">MonadMaybe.hs</a></td>
-    <td><a target="_blank" href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/with_ple/pos/MonadMaybe.hs">MonadMaybe.hs</a></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td><a target="_blank" href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/without_ple/pos/MonadList.hs">MonadList.hs</a></td>
-    <td><a target="_blank" href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/with_ple/pos/MonadList.hs">MonadList.hs</a></td>
-  </tr>
-  <tr>
-    <td>Higher-Order</td>
-    <td><a target="_blank" href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/without_ple/pos/FoldrUniversal.hs">FoldrUniversal.hs</a></td>
-    <td><a target="_blank" href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/with_ple/pos/FoldrUniversal.hs">FoldrUniversal.hs</a></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td><a target="_blank" href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/without_ple/pos/NaturalDeduction.hs">NaturalDeduction.hs</a></td>
-    <td><a target="_blank" href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/with_ple/pos/NaturalDeduction.hs">NaturalDeduction.hs</a></td>
-  </tr>
-  <tr>
-    <td>Func. Correct</td>
-    <td><a target="_blank" href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/without_ple/pos/Solver.hs">Solver.hs</a></td>
-    <td><a target="_blank" href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/with_ple/pos/Solver.hs">Solver.hs</a></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td><a target="_blank" href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/without_ple/pos/Unification.hs">Unification.hs</a></td>
-    <td><a target="_blank" href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/with_ple/pos/Unification.hs">Unification.hs</a></td>
-  </tr>
-  <tr>
-    <td> Conc-Sets</td>
-    <td><a target="_blank" href="https://raw.githubusercontent.com/iu-parfunc/lvars/popl18/src/lvish/tests/verified/SumNoPLE.hs">SumNoPLE.hs</a></td>
-    <td><a target="_blank" href="https://raw.githubusercontent.com/iu-parfunc/lvars/popl18/src/lvish/tests/verified/Sum.hs">Sum.hs</a></td>
-  </tr>
-  <tr>
-    <td> N-Body</td>
-    <td><a target="_blank" href="https://raw.githubusercontent.com/iu-parfunc/verified-instances/popl18/examples/nbody/allpairs_verifiedNoPLE.hs">allpairs_verifiedNoPLE.hs</a></td>
-    <td><a target="_blank" href="https://raw.githubusercontent.com/iu-parfunc/verified-instances/popl18/examples/nbody/allpairs_verified.hs">allpairs_verified.hs</a></td>
-  </tr>
-  <tr>
-    <td> Par-Reducers&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-    <td><a target="_blank" href="https://raw.githubusercontent.com/iu-parfunc/verified-instances/popl18/examples/dpj/IntegerSumReduction2NoPLE.hs">IntegerSumReduction2NoPLE.hs</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-    <td><a target="_blank" href="https://raw.githubusercontent.com/iu-parfunc/verified-instances/popl18/examples/dpj/IntegerSumReduction2.hs">IntegerSumReduction2.hs</a></td>
-  </tr>
-</table>
+| Category      | _Without_ PLE Search                                                                                                                             | _With_ PLE Search                                                                                                                             |
+| :---------    | :-----------------------                                                                                                                         | :--------------------                                                                                                                         |
+| Arithmetic    | [Fibonacci.hs](https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/without_ple/pos/Fibonacci.hs)               | [Fibonacci.hs](https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/with_ple/pos/Fibonacci.hs)               |
+|               | [Ackermann.hs](https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/without_ple/pos/Ackermann.hs)               | [Ackermann.hs](https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/with_ple/pos/Ackermann.hs)               |
+| Class Laws    | [MonoidMaybe.hs](https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/without_ple/pos/MonoidMaybe.hs)           | [MonoidMaybe.hs](https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/with_ple/pos/MonoidMaybe.hs)           |
+|               | [MonoidList.hs](https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/without_ple/pos/MonoidList.hs)             | [MonoidList.hs](https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/with_ple/pos/MonoidList.hs)             |
+|               | [FunctorId.hs](https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/without_ple/pos/FunctorId.hs)               | [FunctorId.hs](https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/with_ple/pos/FunctorId.hs)               |
+|               | [FunctorMaybe.hs](https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/without_ple/pos/FunctorMaybe.hs)         | [FunctorMaybe.hs](https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/with_ple/pos/FunctorMaybe.hs)         |
+|               | [FunctorList.hs](https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/without_ple/pos/FunctorList.hs)           | [FunctorList.hs](https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/with_ple/pos/FunctorList.hs)           |
+|               | [ApplicativeId.hs](https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/without_ple/pos/ApplicativeId.hs)       | [ApplicativeId.hs](https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/with_ple/pos/ApplicativeId.hs)       |
+|               | [ApplicativeMaybe.hs](https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/without_ple/pos/ApplicativeMaybe.hs) | [ApplicativeMaybe.hs](https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/with_ple/pos/ApplicativeMaybe.hs) |
+|               | [ApplicativeList.hs](https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/without_ple/pos/ApplicativeList.hs)   | [ApplicativeList.hs](https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/with_ple/pos/ApplicativeList.hs)   |
+|               | [MonadId.hs](https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/without_ple/pos/MonadId.hs)                   | [MonadId.hs](https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/with_ple/pos/MonadId.hs)                   |
+|               | [MonadMaybe.hs](https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/without_ple/pos/MonadMaybe.hs)             | [MonadMaybe.hs](https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/with_ple/pos/MonadMaybe.hs)             |
+|               | [MonadList.hs](https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/without_ple/pos/MonadList.hs)               | [MonadList.hs](https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/with_ple/pos/MonadList.hs)               |
+| Higher-Order  | [FoldrUniversal.hs](https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/without_ple/pos/FoldrUniversal.hs)     | [FoldrUniversal.hs](https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/with_ple/pos/FoldrUniversal.hs)     |
+|               | [NaturalDeduction.hs](https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/without_ple/pos/NaturalDeduction.hs) | [NaturalDeduction.hs](https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/with_ple/pos/NaturalDeduction.hs) |
+| Func. Correct | [Solver.hs](https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/without_ple/pos/Solver.hs)                     | [Solver.hs](https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/with_ple/pos/Solver.hs)                     |
+|               | [Unification.hs](https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/without_ple/pos/Unification.hs)           | [Unification.hs](https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/with_ple/pos/Unification.hs)           |
+| Conc-Sets     | [SumNoPLE.hs](https://raw.githubusercontent.com/iu-parfunc/lvars/popl18/src/lvish/tests/verified/SumNoPLE.hs)                                    | [Sum.hs](https://raw.githubusercontent.com/iu-parfunc/lvars/popl18/src/lvish/tests/verified/Sum.hs)                                           |
+| N-Body        | [allpairs_verifiedNoPLE.hs](https://raw.githubusercontent.com/iu-parfunc/verified-instances/popl18/examples/nbody/allpairs_verifiedNoPLE.hs)     | [allpairs_verified.hs](https://raw.githubusercontent.com/iu-parfunc/verified-instances/popl18/examples/nbody/allpairs_verified.hs)            |
+| Par-Reducers  | [IntegerSumReduction2NoPLE.hs](https://raw.githubusercontent.com/iu-parfunc/verified-instances/popl18/examples/dpj/IntegerSumReduction2NoPLE.hs) | [IntegerSumReduction2.hs](https://raw.githubusercontent.com/iu-parfunc/verified-instances/popl18/examples/dpj/IntegerSumReduction2.hs)        |
