@@ -72,7 +72,7 @@ You can install Liquid Haskell on your own machine from github.
     $ git clone --recursive https://github.com/iu-parfunc/popl18-lh-prover-artifact.git 
     ```
 
-Doing a recursive checkout here will acquire three submodules in the
+A recursive checkout here acquires three submodules in the
 `checkouts/` directory:
  
  * `liquidhaskell` - core implementation
@@ -81,10 +81,10 @@ Doing a recursive checkout here will acquire three submodules in the
 
 You can then install Liquid Haskell on your system with:
         
-    ```
-    $ cd checkout/liquidhaskell
-    $ stack install
-    ```
+```bash
+$ cd checkout/liquidhaskell
+$ stack install
+```
 
 Stack by default will put the binary in `~/.local/bin`, but the
 `--local-bin-path` option can change this.
