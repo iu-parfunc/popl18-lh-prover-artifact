@@ -42,7 +42,7 @@ To run the benchmarks, you can
 
 ### Build Option 1: Docker 
 
-- Please install `docker`. 
+- Please install [docker, here](https://docs.docker.com/engine/installation/).
 
 - Then, you can run the tests:
 
