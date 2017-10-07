@@ -147,6 +147,50 @@ to count the number of calls to the SMT solver, try this:
     $ grep -c check-sat ./examples/dpj/.liquid/IntegerSumReduction2.hs.smt2
     10
 
+
+
+## Proof Size Measurements
+
+Size measurements depend on GNU coreutils and sloccount.  Using the
+Docker image is recommended.  If running from source, note that we
+noticed some bugs when trying to run our scripts on Perl 5.26, so if
+they don’t work, try using Perl 5.24.
+
+To reproduce the proof sizes, do:
+
+```
+$ cd liquidhaskell
+$ make count
+```
+```
+$ cd verified-instances
+$ make count
+```
+$ cd lvars
+$ make count
+```
+
+You should see output that looks like:
+
+```
+src/Data/VerifiedEq/Instances/Sum.hs
+CODE: 59
+SPEC: 34
+CODE + SPEC: 93
+```
+
+For each file `Foo.hs` we print:
+
+* CODE = lines of haskell code (including proofs)
+- i.e. the sum of the “Impl (l)” and “Proof (l)” columns from Table 1
+(we have to partition the two by manual inspection as, after all all the motivation of the paper is that proofs are just code!)
+
+
+* SPEC = lines of theorem specifications (including liquid & haskell sigs)
+- i.e. the the “Spec (l)” column of Table 1
+
+
+
 ## <a name="source-files"></a>Source Files 
 
 The source files of Benchmarks in Table 1 can be located as follows.
