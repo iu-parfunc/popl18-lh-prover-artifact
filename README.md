@@ -158,17 +158,9 @@ they don’t work, try using Perl 5.24.
 
 To reproduce the proof sizes, do:
 
-```
-$ cd liquidhaskell
-$ make count
-```
-```
-$ cd verified-instances
-$ make count
-```
-$ cd lvars
-$ make count
-```
+   (cd liquidhaskell;      make count)
+   (cd verified-instances; make count)
+   (cd lvars;              make count)
 
 You should see output that looks like:
 
