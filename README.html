@@ -16,7 +16,7 @@
 </ul>
 <h2 id="running-benchmarks"><a name="benchmarks"></a> Running Benchmarks</h2>
 <p>To run the benchmarks, you can</p>
-<ol style="list-style-type: decimal">
+<ol type="1">
 <li>Use a Docker image</li>
 <li>Install Liquid Haskell from source</li>
 </ol>
@@ -24,18 +24,18 @@
 <ul>
 <li><p>Please install <a href="https://docs.docker.com/engine/installation/">docker, here</a>.</p></li>
 <li><p>Then, you can run the tests:</p>
-<pre><code>$ docker run -it parfunc/popl18-lh-prover-artifact</code></pre>
-<p>Or open an interactive shell:</p>
+<pre><code>$ docker run -it parfunc/popl18-lh-prover-artifact</code></pre></li>
+<li><p>Or open an interactive shell:</p>
 <pre><code>$ docker run -it parfunc/popl18-lh-prover-artifact bash</code></pre></li>
 </ul>
 <h3 id="build-option-2-source">Build Option 2: Source</h3>
 <p>You can install Liquid Haskell on your own machine from github.</p>
 <h4 id="download-install">Download &amp; Install:</h4>
-<ol style="list-style-type: decimal">
+<ol type="1">
 <li><p>Install <code>z3</code> from <a href="https://github.com/Z3Prover/z3/releases">this link</a>.</p></li>
 <li><p>Install <code>stack</code> from <a href="https://docs.haskellstack.org/en/stable/README/">this link</a>.</p></li>
 <li><p>Clone this artifact and build LiquidHaskell:</p>
-<pre><code>$ git clone --recursive https://github.com/iu-parfunc/popl18-lh-prover-artifact.git </code></pre></li>
+<pre><code>$ git clone --recursive https://github.com/iu-parfunc/popl18-lh-prover-artifact.git</code></pre></li>
 </ol>
 <p>A recursive checkout here acquires three submodules in the <code>checkouts/</code> directory:</p>
 <ul>
@@ -58,17 +58,17 @@ stack exec -- liquid benchmarks/popl18/with_ple/pos/Unification.hs
 stack exec -- liquid benchmarks/popl18/with_ple/pos/Solver.hs</code></pre>
 <h5 id="run-all-the-benchmarks-of-table-1">Run All the Benchmarks of Table 1</h5>
 <p>We split the benchmarks of Table 1 to 3 categories.</p>
-<ol style="list-style-type: decimal">
+<ol type="1">
 <li><p>To run the benchmarks in categories &quot;Arithmetic&quot;, &quot;Class-Laws&quot;, &quot;Higher-Order&quot;, and &quot;Functional Correctness&quot; of Table 1 <em>with</em> PLE <em>with</em> and <em>without</em> PLE, respectively, do:</p>
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="bu">cd</span> liquidhaskell
-<span class="ex">stack</span> test liquidhaskell --test-arguments=<span class="st">&quot;-p with_ple&quot;</span>    
+<span class="ex">stack</span> test liquidhaskell --test-arguments=<span class="st">&quot;-p with_ple&quot;</span>
 <span class="ex">stack</span> test liquidhaskell --test-arguments=<span class="st">&quot;-p without_ple&quot;</span></code></pre></div></li>
 <li><p>To run the benchmarks in &quot;Conc. Sets&quot; <em>with</em> and <em>without</em> PLE, respectively, do:</p>
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="bu">cd</span> lvars
 <span class="fu">make</span> DOCKER=false TIMEIT=true PLE=true
 <span class="fu">make</span> DOCKER=false TIMEIT=true PLE=false</code></pre></div></li>
 <li><p>Finally, run the benchmarks in &quot;n-body&quot; &amp; &quot;Par. Reducers&quot; categories, <em>with</em> and <em>without</em> PLE, respectively, do:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="bu">cd</span> verified-instances 
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="bu">cd</span> verified-instances
 <span class="fu">make</span> DOCKER=false TIMEIT=true PLE=true
 <span class="fu">make</span> DOCKER=false TIMEIT=true PLE=false</code></pre></div></li>
 </ol>
@@ -90,7 +90,7 @@ CODE + SPEC: 93</code></pre>
 <p>For each file <code>Foo.hs</code> we print:</p>
 <ul>
 <li>CODE = lines of haskell code (including proofs)</li>
-<li><p>i.e. the sum of the “Impl (l)” and “Proof (l)” columns from Table 1 (we have to partition the two by manual inspection as, after all all the motivation of the paper is that proofs are just code!)</p></li>
+<li><p>i.e. the sum of the “Impl (l)” and “Proof (l)” columns from Table 1 (we have to partition the two by manual inspection as, after all the motivation of the paper is that proofs are just code!)</p></li>
 <li>SPEC = lines of theorem specifications (including liquid &amp; haskell sigs)</li>
 <li><p>i.e. the the “Spec (l)” column of Table 1</p></li>
 </ul>
@@ -99,111 +99,111 @@ CODE + SPEC: 93</code></pre>
 <table>
 <thead>
 <tr class="header">
-<th align="left">Category</th>
-<th align="left"><em>Without</em> PLE Search</th>
-<th align="left"><em>With</em> PLE Search</th>
+<th style="text-align: left;">Category</th>
+<th style="text-align: left;"><em>Without</em> PLE Search</th>
+<th style="text-align: left;"><em>With</em> PLE Search</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">Arithmetic</td>
-<td align="left"><a href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/without_ple/pos/Fibonacci.hs">Fibonacci.hs</a></td>
-<td align="left"><a href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/with_ple/pos/Fibonacci.hs">Fibonacci.hs</a></td>
+<td style="text-align: left;">Arithmetic</td>
+<td style="text-align: left;"><a href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/without_ple/pos/Fibonacci.hs">Fibonacci.hs</a></td>
+<td style="text-align: left;"><a href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/with_ple/pos/Fibonacci.hs">Fibonacci.hs</a></td>
 </tr>
 <tr class="even">
-<td align="left"></td>
-<td align="left"><a href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/without_ple/pos/Ackermann.hs">Ackermann.hs</a></td>
-<td align="left"><a href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/with_ple/pos/Ackermann.hs">Ackermann.hs</a></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><a href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/without_ple/pos/Ackermann.hs">Ackermann.hs</a></td>
+<td style="text-align: left;"><a href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/with_ple/pos/Ackermann.hs">Ackermann.hs</a></td>
 </tr>
 <tr class="odd">
-<td align="left">Class Laws</td>
-<td align="left"><a href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/without_ple/pos/MonoidMaybe.hs">MonoidMaybe.hs</a></td>
-<td align="left"><a href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/with_ple/pos/MonoidMaybe.hs">MonoidMaybe.hs</a></td>
+<td style="text-align: left;">Class Laws</td>
+<td style="text-align: left;"><a href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/without_ple/pos/MonoidMaybe.hs">MonoidMaybe.hs</a></td>
+<td style="text-align: left;"><a href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/with_ple/pos/MonoidMaybe.hs">MonoidMaybe.hs</a></td>
 </tr>
 <tr class="even">
-<td align="left"></td>
-<td align="left"><a href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/without_ple/pos/MonoidList.hs">MonoidList.hs</a></td>
-<td align="left"><a href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/with_ple/pos/MonoidList.hs">MonoidList.hs</a></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><a href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/without_ple/pos/MonoidList.hs">MonoidList.hs</a></td>
+<td style="text-align: left;"><a href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/with_ple/pos/MonoidList.hs">MonoidList.hs</a></td>
 </tr>
 <tr class="odd">
-<td align="left"></td>
-<td align="left"><a href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/without_ple/pos/FunctorId.hs">FunctorId.hs</a></td>
-<td align="left"><a href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/with_ple/pos/FunctorId.hs">FunctorId.hs</a></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><a href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/without_ple/pos/FunctorId.hs">FunctorId.hs</a></td>
+<td style="text-align: left;"><a href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/with_ple/pos/FunctorId.hs">FunctorId.hs</a></td>
 </tr>
 <tr class="even">
-<td align="left"></td>
-<td align="left"><a href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/without_ple/pos/FunctorMaybe.hs">FunctorMaybe.hs</a></td>
-<td align="left"><a href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/with_ple/pos/FunctorMaybe.hs">FunctorMaybe.hs</a></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><a href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/without_ple/pos/FunctorMaybe.hs">FunctorMaybe.hs</a></td>
+<td style="text-align: left;"><a href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/with_ple/pos/FunctorMaybe.hs">FunctorMaybe.hs</a></td>
 </tr>
 <tr class="odd">
-<td align="left"></td>
-<td align="left"><a href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/without_ple/pos/FunctorList.hs">FunctorList.hs</a></td>
-<td align="left"><a href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/with_ple/pos/FunctorList.hs">FunctorList.hs</a></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><a href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/without_ple/pos/FunctorList.hs">FunctorList.hs</a></td>
+<td style="text-align: left;"><a href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/with_ple/pos/FunctorList.hs">FunctorList.hs</a></td>
 </tr>
 <tr class="even">
-<td align="left"></td>
-<td align="left"><a href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/without_ple/pos/ApplicativeId.hs">ApplicativeId.hs</a></td>
-<td align="left"><a href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/with_ple/pos/ApplicativeId.hs">ApplicativeId.hs</a></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><a href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/without_ple/pos/ApplicativeId.hs">ApplicativeId.hs</a></td>
+<td style="text-align: left;"><a href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/with_ple/pos/ApplicativeId.hs">ApplicativeId.hs</a></td>
 </tr>
 <tr class="odd">
-<td align="left"></td>
-<td align="left"><a href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/without_ple/pos/ApplicativeMaybe.hs">ApplicativeMaybe.hs</a></td>
-<td align="left"><a href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/with_ple/pos/ApplicativeMaybe.hs">ApplicativeMaybe.hs</a></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><a href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/without_ple/pos/ApplicativeMaybe.hs">ApplicativeMaybe.hs</a></td>
+<td style="text-align: left;"><a href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/with_ple/pos/ApplicativeMaybe.hs">ApplicativeMaybe.hs</a></td>
 </tr>
 <tr class="even">
-<td align="left"></td>
-<td align="left"><a href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/without_ple/pos/ApplicativeList.hs">ApplicativeList.hs</a></td>
-<td align="left"><a href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/with_ple/pos/ApplicativeList.hs">ApplicativeList.hs</a></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><a href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/without_ple/pos/ApplicativeList.hs">ApplicativeList.hs</a></td>
+<td style="text-align: left;"><a href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/with_ple/pos/ApplicativeList.hs">ApplicativeList.hs</a></td>
 </tr>
 <tr class="odd">
-<td align="left"></td>
-<td align="left"><a href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/without_ple/pos/MonadId.hs">MonadId.hs</a></td>
-<td align="left"><a href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/with_ple/pos/MonadId.hs">MonadId.hs</a></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><a href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/without_ple/pos/MonadId.hs">MonadId.hs</a></td>
+<td style="text-align: left;"><a href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/with_ple/pos/MonadId.hs">MonadId.hs</a></td>
 </tr>
 <tr class="even">
-<td align="left"></td>
-<td align="left"><a href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/without_ple/pos/MonadMaybe.hs">MonadMaybe.hs</a></td>
-<td align="left"><a href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/with_ple/pos/MonadMaybe.hs">MonadMaybe.hs</a></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><a href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/without_ple/pos/MonadMaybe.hs">MonadMaybe.hs</a></td>
+<td style="text-align: left;"><a href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/with_ple/pos/MonadMaybe.hs">MonadMaybe.hs</a></td>
 </tr>
 <tr class="odd">
-<td align="left"></td>
-<td align="left"><a href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/without_ple/pos/MonadList.hs">MonadList.hs</a></td>
-<td align="left"><a href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/with_ple/pos/MonadList.hs">MonadList.hs</a></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><a href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/without_ple/pos/MonadList.hs">MonadList.hs</a></td>
+<td style="text-align: left;"><a href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/with_ple/pos/MonadList.hs">MonadList.hs</a></td>
 </tr>
 <tr class="even">
-<td align="left">Higher-Order</td>
-<td align="left"><a href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/without_ple/pos/FoldrUniversal.hs">FoldrUniversal.hs</a></td>
-<td align="left"><a href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/with_ple/pos/FoldrUniversal.hs">FoldrUniversal.hs</a></td>
+<td style="text-align: left;">Higher-Order</td>
+<td style="text-align: left;"><a href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/without_ple/pos/FoldrUniversal.hs">FoldrUniversal.hs</a></td>
+<td style="text-align: left;"><a href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/with_ple/pos/FoldrUniversal.hs">FoldrUniversal.hs</a></td>
 </tr>
 <tr class="odd">
-<td align="left"></td>
-<td align="left"><a href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/without_ple/pos/NaturalDeduction.hs">NaturalDeduction.hs</a></td>
-<td align="left"><a href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/with_ple/pos/NaturalDeduction.hs">NaturalDeduction.hs</a></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><a href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/without_ple/pos/NaturalDeduction.hs">NaturalDeduction.hs</a></td>
+<td style="text-align: left;"><a href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/with_ple/pos/NaturalDeduction.hs">NaturalDeduction.hs</a></td>
 </tr>
 <tr class="even">
-<td align="left">Func. Correct</td>
-<td align="left"><a href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/without_ple/pos/Solver.hs">Solver.hs</a></td>
-<td align="left"><a href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/with_ple/pos/Solver.hs">Solver.hs</a></td>
+<td style="text-align: left;">Func. Correct</td>
+<td style="text-align: left;"><a href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/without_ple/pos/Solver.hs">Solver.hs</a></td>
+<td style="text-align: left;"><a href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/with_ple/pos/Solver.hs">Solver.hs</a></td>
 </tr>
 <tr class="odd">
-<td align="left"></td>
-<td align="left"><a href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/without_ple/pos/Unification.hs">Unification.hs</a></td>
-<td align="left"><a href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/with_ple/pos/Unification.hs">Unification.hs</a></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><a href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/without_ple/pos/Unification.hs">Unification.hs</a></td>
+<td style="text-align: left;"><a href="https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/with_ple/pos/Unification.hs">Unification.hs</a></td>
 </tr>
 <tr class="even">
-<td align="left">Conc-Sets</td>
-<td align="left"><a href="https://raw.githubusercontent.com/iu-parfunc/lvars/popl18/src/lvish/tests/verified/SumNoPLE.hs">SumNoPLE.hs</a></td>
-<td align="left"><a href="https://raw.githubusercontent.com/iu-parfunc/lvars/popl18/src/lvish/tests/verified/Sum.hs">Sum.hs</a></td>
+<td style="text-align: left;">Conc-Sets</td>
+<td style="text-align: left;"><a href="https://raw.githubusercontent.com/iu-parfunc/lvars/popl18/src/lvish/tests/verified/SumNoPLE.hs">SumNoPLE.hs</a></td>
+<td style="text-align: left;"><a href="https://raw.githubusercontent.com/iu-parfunc/lvars/popl18/src/lvish/tests/verified/Sum.hs">Sum.hs</a></td>
 </tr>
 <tr class="odd">
-<td align="left">N-Body</td>
-<td align="left"><a href="https://raw.githubusercontent.com/iu-parfunc/verified-instances/popl18/examples/nbody/allpairs_verifiedNoPLE.hs">allpairs_verifiedNoPLE.hs</a></td>
-<td align="left"><a href="https://raw.githubusercontent.com/iu-parfunc/verified-instances/popl18/examples/nbody/allpairs_verified.hs">allpairs_verified.hs</a></td>
+<td style="text-align: left;">N-Body</td>
+<td style="text-align: left;"><a href="https://raw.githubusercontent.com/iu-parfunc/verified-instances/popl18/examples/nbody/allpairs_verifiedNoPLE.hs">allpairs_verifiedNoPLE.hs</a></td>
+<td style="text-align: left;"><a href="https://raw.githubusercontent.com/iu-parfunc/verified-instances/popl18/examples/nbody/allpairs_verified.hs">allpairs_verified.hs</a></td>
 </tr>
 <tr class="even">
-<td align="left">Par-Reducers</td>
-<td align="left"><a href="https://raw.githubusercontent.com/iu-parfunc/verified-instances/popl18/examples/dpj/IntegerSumReduction2NoPLE.hs">IntegerSumReduction2NoPLE.hs</a></td>
-<td align="left"><a href="https://raw.githubusercontent.com/iu-parfunc/verified-instances/popl18/examples/dpj/IntegerSumReduction2.hs">IntegerSumReduction2.hs</a></td>
+<td style="text-align: left;">Par-Reducers</td>
+<td style="text-align: left;"><a href="https://raw.githubusercontent.com/iu-parfunc/verified-instances/popl18/examples/dpj/IntegerSumReduction2NoPLE.hs">IntegerSumReduction2NoPLE.hs</a></td>
+<td style="text-align: left;"><a href="https://raw.githubusercontent.com/iu-parfunc/verified-instances/popl18/examples/dpj/IntegerSumReduction2.hs">IntegerSumReduction2.hs</a></td>
 </tr>
 </tbody>
 </table>
