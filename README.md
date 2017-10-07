@@ -2,14 +2,14 @@
 
 [![Docker Pulls](https://img.shields.io/docker/pulls/parfunc/popl18-lh-prover-artifact.svg)](https://hub.docker.com/r/parfunc/popl18-lh-prover-artifact/)
 
-The paper presents how we extended Liquid Haskell 
+The paper presents how we extended Liquid Haskell
 to allow complete verification via SMTs.
-You can run Liquid Haskell online, 
-using a docker VM, *or* 
+You can run Liquid Haskell online,
+using a docker VM, *or*
 build it from source.
 This artifact describes
 
-- [Online Demo:](#online) How to run online the examples presented in the paper. 
+- [Online Demo:](#online) How to run online the examples presented in the paper.
 - [Running Benchmarks:](#benchmarks) How to run the banchmarks of Table 1 of the paper.
 - [Source Files:](#source-files) How to check the source files of the benchmarks of Table 1.
 
@@ -18,17 +18,17 @@ This artifact describes
 ## <a name="online"></a> Online Demo
 
 
-The examples presented in the paper (Sections 2 and 3) can be viewed 
-and checked at the interactive, online demo links below: 
+The examples presented in the paper (Sections 2 and 3) can be viewed
+and checked at the interactive, online demo links below:
 
 
-We provide interactive Liquid Haskell code for 
-the examples presented in Sections 2 and 3 of the paper. 
-The Liquid Haskell queries are checked by sending requests to 
+We provide interactive Liquid Haskell code for
+the examples presented in Sections 2 and 3 of the paper.
+The Liquid Haskell queries are checked by sending requests to
 the Liquid Haskell server hosted at [http://goto.ucsd.edu:8090/](http://goto.ucsd.edu:8090/).
 
 - §2 Overview: [.html file](http://goto.ucsd.edu/~nvazou/popl18/_site/Overview.html), [.lhs source](https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/with_ple/Overview.lhs)
-- §2.5 Laws for Lists: [.html file](http://goto.ucsd.edu/~nvazou/popl18/_site/LawsForLists.html), [.lhs source](https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/with_ple/LawsForLists.lhs) 
+- §2.5 Laws for Lists: [.html file](http://goto.ucsd.edu/~nvazou/popl18/_site/LawsForLists.html), [.lhs source](https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/with_ple/LawsForLists.lhs)
 - §3.3 Natural Deduction: [.html file](http://goto.ucsd.edu/~nvazou/popl18/_site/NaturalDeduction.html), [lhs source](https://raw.githubusercontent.com/ucsd-progsys/liquidhaskell/popl18/benchmarks/popl18/with_ple/NaturalDeduction.lhs)
 
 
@@ -36,11 +36,11 @@ the Liquid Haskell server hosted at [http://goto.ucsd.edu:8090/](http://goto.ucs
 
 To run the benchmarks, you can
 
-1. Use a Docker image 
-2. Install Liquid Haskell from source 
+1. Use a Docker image
+2. Install Liquid Haskell from source
 
 
-### Build Option 1: Docker 
+### Build Option 1: Docker
 
 - Please install [docker, here](https://docs.docker.com/engine/installation/).
 
@@ -50,15 +50,15 @@ To run the benchmarks, you can
     $ docker run -it parfunc/popl18-lh-prover-artifact
     ```
 
-    Or open an interactive shell:
+- Or open an interactive shell:
 
     ```
     $ docker run -it parfunc/popl18-lh-prover-artifact bash
     ```
 
-### Build Option 2: Source 
+### Build Option 2: Source
 
-You can install Liquid Haskell on your own machine from github. 
+You can install Liquid Haskell on your own machine from github.
 
 #### Download & Install:
 
@@ -69,18 +69,18 @@ You can install Liquid Haskell on your own machine from github.
 3. Clone this artifact and build LiquidHaskell:
 
     ```
-    $ git clone --recursive https://github.com/iu-parfunc/popl18-lh-prover-artifact.git 
+    $ git clone --recursive https://github.com/iu-parfunc/popl18-lh-prover-artifact.git
     ```
 
 A recursive checkout here acquires three submodules in the
 `checkouts/` directory:
- 
+
  * `liquidhaskell` - core implementation
  * `verified-instances` - benchmark code and examples
  * `lvars` - modified software related to another benchmark
 
 You can then install Liquid Haskell on your system with:
-        
+
 ```bash
 $ cd checkout/liquidhaskell
 $ stack install
@@ -116,7 +116,7 @@ We split the benchmarks of Table 1 to 3 categories.
 
     ```bash
     cd liquidhaskell
-    stack test liquidhaskell --test-arguments="-p with_ple"    
+    stack test liquidhaskell --test-arguments="-p with_ple"
     stack test liquidhaskell --test-arguments="-p without_ple"
     ```
 
@@ -132,7 +132,7 @@ We split the benchmarks of Table 1 to 3 categories.
 3. Finally, run the benchmarks in "n-body" & "Par. Reducers" categories, _with_ and _without_ PLE, respectively, do:
 
     ```bash
-    cd verified-instances 
+    cd verified-instances
     make DOCKER=false TIMEIT=true PLE=true
     make DOCKER=false TIMEIT=true PLE=false
     ```
@@ -175,7 +175,7 @@ For each file `Foo.hs` we print:
 
 * CODE = lines of haskell code (including proofs)
 - i.e. the sum of the “Impl (l)” and “Proof (l)” columns from Table 1
-(we have to partition the two by manual inspection as, after all all the motivation of the paper is that proofs are just code!)
+(we have to partition the two by manual inspection as, after all the motivation of the paper is that proofs are just code!)
 
 
 * SPEC = lines of theorem specifications (including liquid & haskell sigs)
@@ -183,7 +183,7 @@ For each file `Foo.hs` we print:
 
 
 
-## <a name="source-files"></a>Source Files 
+## <a name="source-files"></a>Source Files
 
 The source files of Benchmarks in Table 1 can be located as follows.
 
