@@ -1,0 +1,9 @@
+[submodule "checkouts/verified-instances"]
+	path = checkouts/verified-instances
+	url = https://github.com/iu-parfunc/verified-instances.git
+[submodule "checkouts/liquidhaskell"]
+	path = checkouts/liquidhaskell
+	url = https://github.com/ucsd-progsys/liquidhaskell.git
+[submodule "checkouts/lvars"]
+	path = checkouts/lvars
+	url = https://github.com/iu-parfunc/lvars.git
