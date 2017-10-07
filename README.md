@@ -37,7 +37,7 @@ the Liquid Haskell server hosted at [http://goto.ucsd.edu:8090/](http://goto.ucs
 To run the benchmarks, you can
 
 1. Use a Docker image 
-2. Install Liquid Haskell from source [preferred]
+2. Install Liquid Haskell from source 
 
 
 ### Build Option 1: Docker 
@@ -97,15 +97,15 @@ you can now run Liquid Haskell on the benchmarks.
 
 ##### Run Individual Files
 
-Now you can run specific benchmarks in that shell, e.g. 
-to check the files `Unification.hs` and `Solver.hs`, do:
+Now you can run specific benchmarks in that shell, whether inside
+Docker or not, e.g.  to check the files `Unification.hs` and
+`Solver.hs`, do:
 
-
-    $ stack exec -- liquid benchmarks/popl18/Overview.lhs
-    $ stack exec -- liquid benchmarks/popl18/LawsForLists.lhs
-    $ stack exec -- liquid benchmarks/popl18/NaturalDeduction.lhs
-    $ stack exec -- liquid benchmarks/popl18/ple/pos/Unification.hs
-    $ stack exec -- liquid benchmarks/popl18/ple/pos/Solver.hs
+    $ stack exec -- liquid benchmarks/popl18/with_ple/Overview.lhs
+    $ stack exec -- liquid benchmarks/popl18/with_ple/LawsForLists.lhs
+    $ stack exec -- liquid benchmarks/popl18/with_ple/NaturalDeduction.lhs
+    $ stack exec -- liquid benchmarks/popl18/with_ple/ple/pos/Unification.hs
+    $ stack exec -- liquid benchmarks/popl18/with_ple/ple/pos/Solver.hs
 
 ##### Run All the Benchmarks of Table 1
 
