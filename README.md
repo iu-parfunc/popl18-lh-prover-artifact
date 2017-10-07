@@ -141,13 +141,11 @@ Each test will print a timing to the screen, corresponding to the
 "Time (s)" numbers in Table 1.
 
 If you look inside the generated `.liquid` directory alongside each
-checked `.hs` file you can get some extra information.  For example,
+checked `.hs` file you can glean extra information.  For example,
 to count the number of calls to the SMT solver, try this:
 
-    ```bash
     $ grep -c check-sat ./examples/dpj/.liquid/IntegerSumReduction2.hs.smt2
     10
-    ```
 
 ## <a name="source-files"></a>Source Files 
 
